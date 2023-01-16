@@ -1,3 +1,4 @@
+basic.showString("Mbappé")
 radio.setGroup(1)
 pins.setPull(DigitalPin.P13, PinPullMode.PullNone)
 pins.setPull(DigitalPin.P15, PinPullMode.PullNone)
@@ -5,9 +6,9 @@ pins.setPull(DigitalPin.P14, PinPullMode.PullNone)
 pins.setPull(DigitalPin.P16, PinPullMode.PullNone)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P15) == 0) {
-        radio.sendString("Open")
+        radio.sendString("LeveGodet")
     } else if (pins.digitalReadPin(DigitalPin.P13) == 0) {
-        radio.sendString("Close")
+        radio.sendString("BaisseGodet")
     } else if (pins.digitalReadPin(DigitalPin.P16) == 0) {
         radio.sendString("LEDL")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 0) {
